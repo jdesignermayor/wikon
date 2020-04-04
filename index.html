@@ -1,54 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-	<title></title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/style.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description"
+		content="App movil para concocer los derechos y deberes que tenemos los pasajeros de transporte publico.">
+	<meta name="author" content="Santiago Pulgarin Acevedo">
+	<title>Wikon</title>
+
+	<!-- Bootstrap core CSS CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+	<!-- iconos -->
+	<script src="https://kit.fontawesome.com/45585ddeda.js" crossorigin="anonymous"></script>
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<!-- Custom styles for this template -->
+	<link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
+	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+		<header class="masthead mb-auto">
+			<div class="inner ">
+				<h3 class="masthead-brand">
+					<img src="assets/img/Logo2.png" class="logo" alt="">
+				</h3>
+				<nav id="navigator" class="nav nav-masthead justify-content-center">
+					<a id="btn1" class="nav-link active"  href="#">Inicio</a>
+					<a class="nav-link" href="#" id="btn2">Pasajeros</a>
+					<a class="nav-link" href="#" id="btn3">informate con wikon</a>
+					<button id="tema" onclick="cambiartema()" type="button" class="btn btn-light  btn-lg ml-3">
+						<i class="fas fa-sun"></i> Tema claro
+					</button>
+				</nav>
+			</div>
+		</header>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">
-			<img src="assets/img/Logo2.png" style="width: 142px" alt="">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link">Inicio</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link">Pasajeros</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link">Informate con wikon</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link">Descargar</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+		<main role="main" class="inner bajar-panel">
+			<div class="row">
+				<div class="col">
+					<h1 class="cover-heading">Uniéndonos para crear <span>CULTURA</span></h1>
+					<p class="lead">con WIKON daremos a conocer información necesaria sobre derechos y deberes de un
+						pasajero, además esto lo haremos de
+						una manera muy didáctica que facilitará la navegación para el público</p>
+					<p class="lead">
+						<a href="#" class="btn btn-lg btn-secondary">DESCARGAR</a>
+					</p>
+				</div>
+				<div class="col">
+					<img src="assets/img/flamenco-welcome.png" style="width: 100%;" alt="">
+				</div>
+			</div>
+		</main>
 
-	
+		<footer class="mastfoot mt-auto">
+			<div class="inner">
+				<p>Creado por <a href="#">wikon</a> 2020, todos los derechos son reservados.</p>
+			</div>
+		</footer>
+	</div>
 </body>
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 
 </html>
