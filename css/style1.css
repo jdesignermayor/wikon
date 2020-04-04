@@ -41,15 +41,15 @@ nav a{
 	position: absolute;
 }
 
-.textos h1{
+.titulo h1{
 	align-items: center;
-    text-align: center;
+	text-align: center;
    margin-left: 50%;
    font-size: 11vh;
    margin-top: -28%;;
 }
 
-.textos2 h2{
+.titulo2 h2{
 	text-align: center;
     margin-left: 46%;
     margin-top: 4%;
