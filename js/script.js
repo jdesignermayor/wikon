@@ -1,10 +1,22 @@
 // var img = document.getElementById("principal");
 
 // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgb(7, 7, 7)), url(assets/img/people.png);
+var pantalla = document.getElementById("imgprincipal");
+var miniaturas = document.getElementsByClassName("miniatura");
+
+function cambiar() {
+  var atributo = this.getAttribute("src");
+  var titulo = this.getAttribute("name");
+  pantalla.setAttribute("src", atributo);
+  pantalla.style.transitionDuration = "all 1s";
+}
+
+miniaturas[0].addEventListener("click", cambiar);
+miniaturas[1].addEventListener("click", cambiar);
+miniaturas[2].addEventListener("click", cambiar);
+miniaturas[3].addEventListener("click", cambiar);
 
 document.body.style.backgroundImage = "url(assets/img/people.png)";
-document.body.style.boxShadow = "inset 0 0 5rem rgba(0, 0, 0, 0.5);";
-document.body.style.textShadow = "0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);";
 
 var bt1, btn2, btn3;
 
@@ -18,36 +30,30 @@ function cambiartema() {
   elemento.backgroundColor = "#fff";
   elemento.background = "none";
   elemento.backgroundImage = "none";
-  elemento.textShadow = "none";
-  elemento.boxShadow = "none";
   btn1.style.color = "#21262a";
   btn2.style.color = "#21262a";
   btn3.style.color = "#21262a";
+  document.getElementById("btnDescargar").classList.remove("btn-secondary");
+  document.getElementById("btnDescargar").classList.add("btn-dark");
+  elemento.transitionDuration = "1s";
 }
 
-function mover() {
-  img.style.marginLeft = "80px";
-  img.style.transitionDuration = "1s";
+// null para que no deje de funcionar
+function flecha(param = null) {
+  if (param == 1) {
+    document.getElementById("panel2").focus();
+    document.getElementById("panel2").scrollHeight;
+  }
+  if(param == 2){
+	document.getElementById("panel3").focus();
+    document.getElementById("panel3").scrollHeight;
+  }
 }
 
-mover();
+document.getElementById("btn2").addEventListener("click", function () {
+  flecha(1);
+});
 
-var text1 = document.getElementsByClassName("textoencima")[0];
-
-function mover2() {
-  text1.style.marginLeft = "80px";
-  text1.style.transitionDuration = "1s";
-}
-
-mover2();
-
-var text2 = document.getElementsByClassName("centrado")[0];
-
-function mover3() {
-  text2.style.marginLeft = "-53px";
-  text2.style.transitionDuration = "3s";
-  text2.style.color = "#fff";
-  text2.style.opacity = "100%";
-}
-
-mover3();
+document.getElementById("btn3").addEventListener("click", function () {
+  flecha(2);
+});
