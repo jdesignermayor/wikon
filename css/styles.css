@@ -43,7 +43,15 @@ body {
 
 .navbar {
   padding: 0.5rem 4rem !important;
-  background-color: #e9f6f6 !important;
+    /* background-color: #e9f6f6 !important; */
+  background-color: rgba(233, 246, 246, 0.37) !important;
+  backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px);
+  max-width: 100%;
+  position: sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 body {
