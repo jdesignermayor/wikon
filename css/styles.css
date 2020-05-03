@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -43,15 +44,13 @@ body {
 
 .navbar {
   padding: 0.5rem 4rem !important;
-    /* background-color: #e9f6f6 !important; */
   background-color: rgba(233, 246, 246, 0.37) !important;
-  backdrop-filter: blur(8px) !important;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(32px) !important;
   max-width: 100%;
-  position: sticky;
-  position: sticky;
+  position: fixed !important;
   top: 0;
   z-index: 1;
+  overflow-y: scroll;
 }
 
 body {
@@ -68,19 +67,24 @@ body {
   }
   .ulpropio li {
     font-size: 1.5em !important;
+    margin-top: 8px !important;
   }
   .btnpropio {
     font-size: 1.5em !important;
   }
   .imagenes-carta2{
-    width: 70% !important;
+    width: 100% !important;
     margin : 0px !important;
-
+  }
+  .paneles {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    margin-bottom: 15% !important;
   }
 }
 
 .seccion-logo {
-  margin-top: 202px;
+  margin-top: 87px;
   font-weight: bold;
   letter-spacing: -3.18px;
   line-height: 77px;
@@ -111,7 +115,7 @@ body {
 
 .carta {
   width: 100%;
-  height: 300px;
+
   /* border-radius: 21px 21px 0 0; */
   /* background-color: #fff;
   -webkit-box-shadow: 0px 22px 70px -28px rgba(0, 0, 0, 0.75);
