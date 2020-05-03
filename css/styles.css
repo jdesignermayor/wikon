@@ -56,7 +56,7 @@ body {
 
 @media (max-width: 576px) {
   .text-titulo {
-    font-size: 57px !important;
+    font-size: 40px !important;
   }
   .ulpropio li {
     font-size: 1.5em !important;
