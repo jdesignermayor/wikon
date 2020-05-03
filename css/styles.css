@@ -64,6 +64,11 @@ body {
   .btnpropio {
     font-size: 1.5em !important;
   }
+  .imagenes-carta2{
+    width: 70% !important;
+    margin : 0px !important;
+
+  }
 }
 
 .seccion-logo {
@@ -123,3 +128,14 @@ body {
 .imagenes-carta {
   width: 100%;
 }
+
+.imagenes-carta2 {
+  width: 38%;
+  margin-left: 50%;
+  margin-top: 170px;
+}
+
+.imagenes-carta3 {
+  width: 100%;
+}
+
