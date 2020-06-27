@@ -151,3 +151,7 @@ body {
   width: 100%;
 }
 
+#labelPrincipal {
+  margin-top: -192px;
+  opacity: 0.5;
+}

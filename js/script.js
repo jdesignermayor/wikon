@@ -11,6 +11,7 @@ function cambiar() {
   pantalla.style.transitionDuration = "all 1s";
 }
 
+/*
 miniaturas[0].addEventListener("click", cambiar);
 miniaturas[1].addEventListener("click", cambiar);
 miniaturas[2].addEventListener("click", cambiar);
@@ -57,3 +58,49 @@ document.getElementById("btn2").addEventListener("click", function () {
 document.getElementById("btn3").addEventListener("click", function () {
   flecha(2);
 });
+*/
+
+var textWrapper = document.querySelector('.labelPrincipal');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+var tl = anime.timeline({loop: true})
+  .add({
+    targets: '.labelPrincipal .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2150,
+    delay: (el, i) => 20 * (i+1),
+    loop: false
+  });
+
+setTimeout(function(){
+  tl.pause();
+}, 2500);
+
+$(document).ready(function() {
+var lastScrollTop = 0;
+$(window).on('scroll', function() {
+  alert('hola')
+  
+    var header = $('.header');
+    var stage0 = $('.stage-0');
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > lastScrollTop) {
+        // down scroll
+       /* if (scrollTop > stage0.offset().top + stage0.height()) {
+            header.addClass('hide').removeClass('color');
+        }*/
+      alert('haciendo abajo scroll...')
+    } else {
+      alert('haciendo arriba scroll...')
+        // up scroll
+        /* if (scrollTop <= stage0.offset().top + stage0.height()) {
+            header.removeClass('color headerBGchange headerLIchange');
+        } else {
+            header.removeClass('hide').addClass('color headerBGchange headerLIchange');
+        } */
+    }
+    lastScrollTop = scrollTop;
+});
+});
+
