@@ -1,59 +1,52 @@
-// var img = document.getElementById("principal");
+$(document).ready(function () {
+  var ancla1 = $(".ancla1").offset().top;
+  var ancla2 = $(".ancla2").offset().top;
+  var ancla3 = $(".ancla3").offset().top;
 
-// background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgb(7, 7, 7)), url(assets/img/people.png);
-var pantalla = document.getElementById("imgprincipal");
-var miniaturas = document.getElementsByClassName("miniatura");
+  $("#ancla1").css("opacity", "0");
+  $("#ancla2").css("opacity", "0");
+  $("#ancla3").css("opacity", "0");
 
-function cambiar() {
-  var atributo = this.getAttribute("src");
-  var titulo = this.getAttribute("name");
-  pantalla.setAttribute("src", atributo);
-  pantalla.style.transitionDuration = "all 1s";
-}
+  $("body").scroll(function () {
+    if ($(this).scrollTop() >= ancla1 && $(this).scrollTop() <= ancla2) {
+      $("#ancla1").css("opacity", "100");
+      $("#ancla1").addClass("animate__animated animate__fadeInDown");
+    }
+    if ($(this).scrollTop() >= ancla2 && $(this).scrollTop() <= ancla3) {
+      $("#ancla2").css("opacity", "100");
+      $("#ancla2").addClass("animate__animated animate__fadeInDown");
+    }
+    if ($(this).scrollTop() >= ancla3) {
+      $("#ancla3").css("opacity", "100");
+      $("#ancla3").addClass("animate__animated animate__fadeInDown");
+    }
+  });
 
-miniaturas[0].addEventListener("click", cambiar);
-miniaturas[1].addEventListener("click", cambiar);
-miniaturas[2].addEventListener("click", cambiar);
-miniaturas[3].addEventListener("click", cambiar);
+  $(".switch").click(function () {
+    $("body").toggleClass("dark-mode");
 
-document.body.style.backgroundImage = "url(assets/img/people.png)";
+    if (!$(".navbar").hasClass("navigation")) {
+      $(".navbar").addClass("navigation");
+      $(".logo").attr("src", "assets/img/logoblack.png");
+    } else {
+      $(".navbar").removeClass("navigation");
+      $(".logo").attr("src", "assets/img/logo.png");
+    }
+  });
 
-var bt1, btn2, btn3;
-
-btn1 = document.getElementById("btn1");
-btn2 = document.getElementById("btn2");
-btn3 = document.getElementById("btn3");
-
-function cambiartema() {
-  var elemento = document.body.style;
-  elemento.color = "#212529";
-  elemento.backgroundColor = "#fff";
-  elemento.background = "none";
-  elemento.backgroundImage = "none";
-  btn1.style.color = "#21262a";
-  btn2.style.color = "#21262a";
-  btn3.style.color = "#21262a";
-  document.getElementById("btnDescargar").classList.remove("btn-secondary");
-  document.getElementById("btnDescargar").classList.add("btn-dark");
-  elemento.transitionDuration = "1s";
-}
-
-// null para que no deje de funcionar
-function flecha(param = null) {
-  if (param == 1) {
-    document.getElementById("panel2").focus();
-    document.getElementById("panel2").scrollHeight;
-  }
-  if(param == 2){
-	document.getElementById("panel3").focus();
-    document.getElementById("panel3").scrollHeight;
-  }
-}
-
-document.getElementById("btn2").addEventListener("click", function () {
-  flecha(1);
+  $("nav a").click(function (e) {
+    e.preventDefault(); //evitar el eventos del enlace normal
+    var strAncla = $(this).attr("href"); //id del ancla
+    $("body,html")
+      .stop(true, true)
+      .animate(
+        {
+          scrollTop: $(strAncla).offset().center,
+        },
+        1000
+      );
+  });
+  
 });
 
-document.getElementById("btn3").addEventListener("click", function () {
-  flecha(2);
-});
+

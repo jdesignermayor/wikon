@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +14,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet">
 	<!-- iconos -->
 	<script src="https://kit.fontawesome.com/45585ddeda.js" crossorigin="anonymous"></script>
-
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
@@ -24,37 +22,38 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
 	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+	<link rel="appl e-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 	<!-- Custom styles for this template -->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-	<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light navigation">
 		<a class="navbar-brand" href="#">
-			<img src="assets/img/logoblack.png" class="logo" alt="">
+			<img src="assets/img/logoblack.png" class="logo " alt="">
 		</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-			aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle ">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0 ulpropio">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" data-ancla="uno" href="#uno">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Pasajeros</a>
+					<a class="nav-link" data-ancla="dos" href="#dos">Pasajeros</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Informate con wikon</a>
+					<a class="nav-link" data-ancla="tres" href="#tres">Informate con wikon</a>
 				</li>
 			</ul>
 			<div>
@@ -63,83 +62,100 @@
 					Descargar Ya!</button>
 			</div>
 			<div class="pl-md-3">
-				<button class="btnpropio btn btn btn-outline-dark btn-block" type="submit"><i
+				<button class="btnpropio btn btn btn-outline-dark btn-block switch" type="submit"><i
 						class="fas fa-moon"></i></button>
 			</div>
 		</div>
 	</nav>
 
-	<div class="seccion-logo">
-		<p class="text-titulo font-weight-normal font-weight-bold ">Uniéndonos para crear cultura.</p>
+	<div class="seccion-logo animate__animated animate__fadeIn">
+		<p class="text-titulo font-weight-normal font-weight-bold" id="uno">Uniéndonos para crear cultura.</p>
 		<h5 class="ml-3 seccion-texto">Información necesaria sobre derechos y deberes del pasajero de forma didáctica.
 		</h5>
-		<button type="button" class="btn btn-primary btn-lg">Descargar Ya!</button>
+		<button type="button" class="btn btn-primary btn-lg ancla1"  >Descargar Ya!</button>
 	</div>
-	<div class="contenido">
-		<div class="row paneles">
+	<div class="contenido" id="dos">
+
+		<!-- CONTENIDO 1 -->
+		<div class="row contenedor" id="ancla1">
 			<div class="col-md-6 col-sm-12">
 				<div class="carta">
 					<img class="imagenes-carta" src="assets/img/undraw_social_distancing_2g0u.svg" alt="">
 				</div>
 			</div>
-			<div class="col pt-5 pl-5 pb-5">
+			<div class="col texto">
 				<h1 class="font-weight-bold pb-4">Pasajeros</h1>
 				<p>Ser un pasajero del común es muy
-				fácil, basta con ser un usuario de
-				un medio de transporte,pero ser
-				un pasajero conlleva una gran
-				responsabilidad, entérate de todo
-				lo que tenemos para ti.</p>
-				<button type="button" class="btn btn-primary btn-lg font-weight-normal">Saber más &nbsp;<i class="fas fa-arrow-right"></i></button>
+					fácil, basta con ser un usuario de
+					un medio de transporte,pero ser
+					un pasajero conlleva una gran
+					responsabilidad, entérate de todo
+					lo que tenemos para ti.</p>
+				<button type="button" class="btn btn-primary btn-lg font-weight-normal ancla2">Saber más &nbsp;<i
+						class="fas fa-arrow-right"></i></button>
 			</div>
-			<div class="col pt-5 pl-5">
-				<h1 class="font-weight-bold pb-4">Infórmate con Wikon</h1>
+		</div>
+		</div>
+		<!-- FIN CONTENIDO 1 -->
+	
+		<!-- CONTENIDO 2  -->
+		<div class="contenido">
+		<div class="row contenedor " id="ancla2" >
+			<div class="col texto" >
+				<h1 class="font-weight-bold pb-4" >Infórmate con Wikon</h1>
 				<p>Sé un pasajero ejemplar,ceder el puesto a personas con movilidad reducida,
 					saludar a los demas,cuidar de tu vida y velar por los derechos y deberes
-					 es tarea de todos.</p>
-
-				<button type="button" class="btn btn-primary btn-lg font-weight-normal">Saber más &nbsp;<i class="fas fa-arrow-right"></i></button>
+					es tarea de todos.</p>
+				<button type="button" class="btn btn-primary btn-lg font-weight-normal ancla3">Saber más &nbsp;<i
+						class="fas fa-arrow-right"></i></button>
 			</div>
 			<div class="col-md-6 col-sm-12 pt-5">
-				<div class="carta">
+				<div class="carta" id="tres">
 					<img class="imagenes-carta" src="assets/img/undraw_annotation_7das.svg" alt="">
 				</div>
-				<div class="dropdown-divider"></div>
 			</div>
-			
-			<div class="col-md-6 mt-5 col-sm-12 pb-5">
+		</div>
+		</div>
+		<!-- FIN CONTENIDO 2 -->
+
+		<!-- CONTENIDO 3 -->
+		<div class="contenido">
+		<div class="row contenedor ancla3" id="ancla3">
+			<div class="col-md-6 col-sm-12 ">
 				<div class="carta">
 					<img class="imagenes-carta" src="assets/img/undraw_Mobile_app_p3ts.svg" alt="">
 				</div>
 			</div>
-			<div class="col mt-5 pl-5 ">
+			<div class="col texto">
 				<h1 class="font-weight-bold pb-4">Descargar Ya!</h1>
 				<p>Traemos para tí una manera de aprender diferente a las demás
 					garantizandote una aprendizaje didáctico y divertido para tí
 					el momento es ahora!</p>
-
 				<button type="button" class="btn btn-primary btn-lg font-weight-normal">Saber más &nbsp;<i class="fas fa-arrow-right"></i></button>
 			</div>
 		</div>
+		</div>
+		<!-- FIN CONTENIDO 3 -->
+	</div>
 	</div>
 
-		<footer class="container py-5 p-5">
-			<div class="row">
-				<div class="col-12 col-md">
-					<img src="assets/img/logoblack.png" class="logo" alt="">
-					<small class="d-block mb-3 text-muted">© 2020</small>
-				</div>
-				<div class="col-6 col-md">
-					<h5>Quiénes Somos</h5>
-				</div>
-				<div class="col-6 col-md">
-					<h5>Contáctanos</h5>
-				</div>
-				<div class="btn-btn-primary btn-lg col-6 col-md">
-					<h5>Descargar</h5>
-				</div>
+	<footer class="container py-5 p-5">
+		<div class="row" >
+			<div class="col-12 col-md">
+				<img src="assets/img/logoblack.png" class="logo" alt="">
+				<small class="d-block mb-3 text-muted">© 2020</small>
 			</div>
-		</footer>
+			<div class="col-6 col-md">
+				<h5>Quiénes Somos</h5>
+			</div>
+			<div class="col-6 col-md">
+				<h5>Contáctanos</h5>
+			</div>
+			<div class="btn-btn-primary btn-lg col-6 col-md">
+				<h5>Descargar</h5>
+			</div>
+		</div>
+	</footer>
 
 	<!--  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 		<header class="masthead mb-auto">
@@ -255,6 +271,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="js/script.js"></script>
 
 </html>

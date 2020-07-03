@@ -59,6 +59,7 @@ body {
 
 .text-titulo {
   font-size: 4.5em !important;
+  padding-top: 10%;
 }
 
 @media (max-width: 576px) {
@@ -72,9 +73,9 @@ body {
   .btnpropio {
     font-size: 1.5em !important;
   }
-  .imagenes-carta2{
+  .imagenes-carta2 {
     width: 100% !important;
-    margin : 0px !important;
+    margin: 0px !important;
   }
   .paneles {
     padding-left: 5% !important;
@@ -130,7 +131,16 @@ body {
 }
 
 .contenido {
-  margin-top: 112px;
+  padding-left: 8em;
+  padding-right: 8em;
+  padding-left: 8em;
+  padding-right: 8em;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-top: 12%;
 }
 
 .btn-link {
@@ -151,3 +161,27 @@ body {
   width: 100%;
 }
 
+.contenedor {
+  padding: 100px 0px 100px 0px;
+}
+
+.texto {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+.dark-mode{
+  background-color: black !important;
+  color: #fff;
+  transition-duration: 0.5s;
+}
+
+.dark-mode a{
+  color: #fff !important;
+}
+
+.dark-mode .navbar {
+  background-color: rgba(0, 0, 0, 0.37) !important;
+}
